@@ -1,0 +1,18 @@
+// Put this exact code in a file called app.js in your repo root
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/html' });
+  res.end(`
+    <!DOCTYPE html>
+    <html>
+      <body style="margin:0; height:100vh; display:flex; align-items:center; justify-content:center; background:#000; color:#0f0; font-family:sans-serif;">
+        <h1 style="font-size:20vw;">HELLO</h1>
+      </body>
+    </html>
+  `);
+});
+
+server.listen(process.env.PORT || 3000, () => {
+  console.log('HELLO server running');
+});
